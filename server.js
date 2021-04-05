@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const bcrypt = require('bcrypt') //encrypt passwords
 
+const initailisePassport = require('/passport-config')
+const passport = require('passport')
+initailisePassport(passport)
 const users =[]
 
 app.set('view-engine', 'ejs')
