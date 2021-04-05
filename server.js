@@ -23,8 +23,14 @@ app.get('/register', (req, res) => {
     res.render('register.ejs')
 })
 
-app.post('/register', (req, res) => {
+app.post('/register', async (req, res) => {
+    try{
+     const hashedPasword = bcrypt.hash(req.body.passord, 10)  
 
+    }catch{
+
+    }
+    req.body.email  
 })
 
 app.listen(3000)
